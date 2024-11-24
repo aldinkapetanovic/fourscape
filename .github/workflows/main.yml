@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push springboot-app image
-        working-directory: ./springboot-app
+        working-directory: ./fourscape
         run: |
           docker build -t ghcr.io/${{ github.repository_owner }}/springboot-app:latest .
           docker push ghcr.io/${{ github.repository_owner }}/springboot-app:latest
